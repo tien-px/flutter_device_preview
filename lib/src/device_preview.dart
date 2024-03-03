@@ -85,7 +85,7 @@ class DevicePreview extends StatefulWidget {
   /// The default selected device when opening device preview for the first time.
   final DeviceInfo? defaultDevice;
 
-  final List<String> shortcutDevices;
+  final List<DeviceInfo> shortcutDevices;
 
   /// The available devices used for previewing.
   final List<DeviceInfo>? devices;
@@ -499,9 +499,7 @@ class _DevicePreviewState extends State<DevicePreview> {
           );
         }
 
-        final deviceIdentifier = context.select(
-          (DevicePreviewStore store) => store.data.deviceIdentifier,
-        );
+        final deviceInfo = context.select((DevicePreviewStore store) => store.deviceInfo);
 
         final isEnabled = context.select(
           (DevicePreviewStore store) => store.data.isEnabled,
@@ -634,14 +632,16 @@ class _DevicePreviewState extends State<DevicePreview> {
                         Positioned(
                           top: 0,
                           left: 0,
+                          right: 0,
                           child: Visibility(
                             visible: isEnabled,
                             child: SafeArea(
                               child: SizedBox(
                                 height: 20,
                                 child: Text(
-                                  deviceIdentifier ?? "",
-                                  style: const TextStyle(color: Colors.black),
+                                  deviceInfo.name ?? "",
+                                  style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ),

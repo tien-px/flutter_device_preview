@@ -29,7 +29,7 @@ class DevicePreviewSmallLayout extends StatelessWidget {
   final ValueChanged<bool> onMenuVisibleChanged;
 
   /// The devices that can be quickly selected.
-  final List<String> shortcutDevices;
+  final List<DeviceInfo> shortcutDevices;
 
   /// The sections containing the tools.
   ///
@@ -82,7 +82,7 @@ class _BottomToolbar extends StatelessWidget {
   }) : super(key: key);
 
   final VoidCallback showPanel;
-  final List<String> shortcuts;
+  final List<DeviceInfo> shortcuts;
 
   @override
   Widget build(BuildContext context) {
@@ -91,9 +91,8 @@ class _BottomToolbar extends StatelessWidget {
     final deviceIdentifier = context.select(
       (DevicePreviewStore store) => store.deviceInfo.identifier,
     );
-    print(devices.map((d) => d.identifier).toList());
     List<DeviceInfo> shortcutDevices = shortcuts
-        .map((id) => devices.firstWhereOrNull((d) => d.identifier.toString().toLowerCase() == id.toLowerCase()))
+        .map((a) => devices.firstWhereOrNull((b) => b.identifier == a.identifier))
         .whereType<DeviceInfo>()
         .toList();
 

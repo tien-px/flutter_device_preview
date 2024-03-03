@@ -9,11 +9,11 @@ void main() {
   runApp(
     DevicePreview(
       enabled: true,
-      shortcutDevices: const [
-        "ios_phone_iphone-se",
-        "ios_phone_iphone-13-pro-max",
-        "ios_tablet_ipad-air-4",
-        "ios_tablet_ipad-pad-pro-11inches",
+      shortcutDevices: [
+        Devices.ios.iPhoneSE,
+        Devices.ios.iPhone13ProMax,
+        Devices.ios.iPadAir4,
+        Devices.ios.iPad12InchesGen4,
       ],
       tools: const [
         ...DevicePreview.defaultTools,

@@ -9,10 +9,6 @@ part of 'state.dart';
 _$DevicePreviewDataImpl _$$DevicePreviewDataImplFromJson(
         Map<String, dynamic> json) =>
     _$DevicePreviewDataImpl(
-      shortcutDevices: (json['shortcutDevices'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
       isToolbarVisible: json['isToolbarVisible'] as bool? ?? true,
       isEnabled: json['isEnabled'] as bool? ?? true,
       orientation:
@@ -47,7 +43,6 @@ _$DevicePreviewDataImpl _$$DevicePreviewDataImplFromJson(
 Map<String, dynamic> _$$DevicePreviewDataImplToJson(
         _$DevicePreviewDataImpl instance) =>
     <String, dynamic>{
-      'shortcutDevices': instance.shortcutDevices,
       'isToolbarVisible': instance.isToolbarVisible,
       'isEnabled': instance.isEnabled,
       'orientation': _$OrientationEnumMap[instance.orientation]!,

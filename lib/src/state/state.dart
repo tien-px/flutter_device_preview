@@ -38,9 +38,6 @@ class DevicePreviewData with _$DevicePreviewData {
   /// Create a new [DevicePreviewData] configuration from all
   /// properties.
   const factory DevicePreviewData({
-    /// The list of all shortcuts to devices.
-    @Default([]) List<String> shortcutDevices,
-
     /// Indicate whether the toolbar is visible.
     @Default(true) bool isToolbarVisible,
 

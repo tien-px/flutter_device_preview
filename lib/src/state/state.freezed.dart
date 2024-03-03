@@ -560,9 +560,6 @@ DevicePreviewData _$DevicePreviewDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DevicePreviewData {
-  /// The list of all shortcuts to devices.
-  List<String> get shortcutDevices => throw _privateConstructorUsedError;
-
   /// Indicate whether the toolbar is visible.
   bool get isToolbarVisible => throw _privateConstructorUsedError;
 
@@ -626,8 +623,7 @@ abstract class $DevicePreviewDataCopyWith<$Res> {
       _$DevicePreviewDataCopyWithImpl<$Res, DevicePreviewData>;
   @useResult
   $Res call(
-      {List<String> shortcutDevices,
-      bool isToolbarVisible,
+      {bool isToolbarVisible,
       bool isEnabled,
       Orientation orientation,
       String? deviceIdentifier,
@@ -662,7 +658,6 @@ class _$DevicePreviewDataCopyWithImpl<$Res, $Val extends DevicePreviewData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? shortcutDevices = null,
     Object? isToolbarVisible = null,
     Object? isEnabled = null,
     Object? orientation = null,
@@ -682,10 +677,6 @@ class _$DevicePreviewDataCopyWithImpl<$Res, $Val extends DevicePreviewData>
     Object? customDevice = freezed,
   }) {
     return _then(_value.copyWith(
-      shortcutDevices: null == shortcutDevices
-          ? _value.shortcutDevices
-          : shortcutDevices // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       isToolbarVisible: null == isToolbarVisible
           ? _value.isToolbarVisible
           : isToolbarVisible // ignore: cast_nullable_to_non_nullable
@@ -791,8 +782,7 @@ abstract class _$$DevicePreviewDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> shortcutDevices,
-      bool isToolbarVisible,
+      {bool isToolbarVisible,
       bool isEnabled,
       Orientation orientation,
       String? deviceIdentifier,
@@ -827,7 +817,6 @@ class __$$DevicePreviewDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? shortcutDevices = null,
     Object? isToolbarVisible = null,
     Object? isEnabled = null,
     Object? orientation = null,
@@ -847,10 +836,6 @@ class __$$DevicePreviewDataImplCopyWithImpl<$Res>
     Object? customDevice = freezed,
   }) {
     return _then(_$DevicePreviewDataImpl(
-      shortcutDevices: null == shortcutDevices
-          ? _value._shortcutDevices
-          : shortcutDevices // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       isToolbarVisible: null == isToolbarVisible
           ? _value.isToolbarVisible
           : isToolbarVisible // ignore: cast_nullable_to_non_nullable
@@ -927,8 +912,7 @@ class __$$DevicePreviewDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DevicePreviewDataImpl implements _DevicePreviewData {
   const _$DevicePreviewDataImpl(
-      {final List<String> shortcutDevices = const [],
-      this.isToolbarVisible = true,
+      {this.isToolbarVisible = true,
       this.isEnabled = true,
       this.orientation = Orientation.portrait,
       this.deviceIdentifier,
@@ -945,23 +929,10 @@ class _$DevicePreviewDataImpl implements _DevicePreviewData {
       this.textScaleFactor = 1.0,
       this.settings,
       this.customDevice = null})
-      : _shortcutDevices = shortcutDevices,
-        _pluginData = pluginData;
+      : _pluginData = pluginData;
 
   factory _$DevicePreviewDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$DevicePreviewDataImplFromJson(json);
-
-  /// The list of all shortcuts to devices.
-  final List<String> _shortcutDevices;
-
-  /// The list of all shortcuts to devices.
-  @override
-  @JsonKey()
-  List<String> get shortcutDevices {
-    if (_shortcutDevices is EqualUnmodifiableListView) return _shortcutDevices;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_shortcutDevices);
-  }
 
   /// Indicate whether the toolbar is visible.
   @override
@@ -1053,7 +1024,7 @@ class _$DevicePreviewDataImpl implements _DevicePreviewData {
 
   @override
   String toString() {
-    return 'DevicePreviewData(shortcutDevices: $shortcutDevices, isToolbarVisible: $isToolbarVisible, isEnabled: $isEnabled, orientation: $orientation, deviceIdentifier: $deviceIdentifier, locale: $locale, isFrameVisible: $isFrameVisible, isDarkMode: $isDarkMode, boldText: $boldText, isVirtualKeyboardVisible: $isVirtualKeyboardVisible, disableAnimations: $disableAnimations, highContrast: $highContrast, accessibleNavigation: $accessibleNavigation, invertColors: $invertColors, pluginData: $pluginData, textScaleFactor: $textScaleFactor, settings: $settings, customDevice: $customDevice)';
+    return 'DevicePreviewData(isToolbarVisible: $isToolbarVisible, isEnabled: $isEnabled, orientation: $orientation, deviceIdentifier: $deviceIdentifier, locale: $locale, isFrameVisible: $isFrameVisible, isDarkMode: $isDarkMode, boldText: $boldText, isVirtualKeyboardVisible: $isVirtualKeyboardVisible, disableAnimations: $disableAnimations, highContrast: $highContrast, accessibleNavigation: $accessibleNavigation, invertColors: $invertColors, pluginData: $pluginData, textScaleFactor: $textScaleFactor, settings: $settings, customDevice: $customDevice)';
   }
 
   @override
@@ -1061,8 +1032,6 @@ class _$DevicePreviewDataImpl implements _DevicePreviewData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevicePreviewDataImpl &&
-            const DeepCollectionEquality()
-                .equals(other._shortcutDevices, _shortcutDevices) &&
             (identical(other.isToolbarVisible, isToolbarVisible) ||
                 other.isToolbarVisible == isToolbarVisible) &&
             (identical(other.isEnabled, isEnabled) ||
@@ -1103,7 +1072,6 @@ class _$DevicePreviewDataImpl implements _DevicePreviewData {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_shortcutDevices),
       isToolbarVisible,
       isEnabled,
       orientation,
@@ -1139,8 +1107,7 @@ class _$DevicePreviewDataImpl implements _DevicePreviewData {
 
 abstract class _DevicePreviewData implements DevicePreviewData {
   const factory _DevicePreviewData(
-      {final List<String> shortcutDevices,
-      final bool isToolbarVisible,
+      {final bool isToolbarVisible,
       final bool isEnabled,
       final Orientation orientation,
       final String? deviceIdentifier,
@@ -1161,10 +1128,6 @@ abstract class _DevicePreviewData implements DevicePreviewData {
   factory _DevicePreviewData.fromJson(Map<String, dynamic> json) =
       _$DevicePreviewDataImpl.fromJson;
 
-  @override
-
-  /// The list of all shortcuts to devices.
-  List<String> get shortcutDevices;
   @override
 
   /// Indicate whether the toolbar is visible.
