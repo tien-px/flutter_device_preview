@@ -9,9 +9,15 @@ void main() {
   runApp(
     DevicePreview(
       enabled: true,
-      tools: [
+      shortcutDevices: const [
+        "ios_phone_iphone-se",
+        "ios_phone_iphone-13-pro-max",
+        "ios_tablet_ipad-air-4",
+        "ios_tablet_ipad-pad-pro-11inches",
+      ],
+      tools: const [
         ...DevicePreview.defaultTools,
-        const CustomPlugin(),
+        CustomPlugin(),
       ],
       builder: (context) => const BasicApp(),
     ),

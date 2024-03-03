@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui' as ui;
 
 import 'package:device_frame/device_frame.dart';
 import 'package:device_preview/src/state/state.dart';
@@ -14,10 +15,8 @@ import 'package:device_preview/src/views/tool_panel/sections/system.dart';
 import 'package:device_preview/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-import 'dart:ui' as ui;
 
 import 'locales/default_locales.dart';
 import 'utilities/screenshot.dart';
@@ -57,6 +56,7 @@ class DevicePreview extends StatefulWidget {
     this.isToolbarVisible = true,
     this.availableLocales,
     this.defaultDevice,
+    this.shortcutDevices = const [],
     this.tools = defaultTools,
     this.storage,
     this.enabled = true,
@@ -84,6 +84,8 @@ class DevicePreview extends StatefulWidget {
 
   /// The default selected device when opening device preview for the first time.
   final DeviceInfo? defaultDevice;
+
+  final List<String> shortcutDevices;
 
   /// The available devices used for previewing.
   final List<DeviceInfo>? devices;
@@ -350,8 +352,7 @@ class DevicePreview extends StatefulWidget {
 class _DevicePreviewState extends State<DevicePreview> {
   bool _isToolPanelPopOverOpen = false;
 
-  late DevicePreviewStorage storage =
-      widget.storage ?? DevicePreviewStorage.preferences();
+  late DevicePreviewStorage storage = widget.storage ?? DevicePreviewStorage.preferences();
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -361,8 +362,7 @@ class _DevicePreviewState extends State<DevicePreview> {
 
   /// Takes a screenshot with the current configuration.
   Future<DeviceScreenshot> screenshot(DevicePreviewStore store) async {
-    final boundary =
-        _repaintKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
+    final boundary = _repaintKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
     const format = ui.ImageByteFormat.png;
 
     final image = await boundary.toImage(
@@ -499,6 +499,10 @@ class _DevicePreviewState extends State<DevicePreview> {
           );
         }
 
+        final deviceIdentifier = context.select(
+          (DevicePreviewStore store) => store.data.deviceIdentifier,
+        );
+
         final isEnabled = context.select(
           (DevicePreviewStore store) => store.data.isEnabled,
         );
@@ -535,22 +539,14 @@ class _DevicePreviewState extends State<DevicePreview> {
 
                     final borderRadius = isToolbarVisible
                         ? BorderRadius.only(
-                            topRight: isSmall
-                                ? Radius.zero
-                                : const Radius.circular(16),
+                            topRight: isSmall ? Radius.zero : const Radius.circular(16),
                             bottomRight: const Radius.circular(16),
-                            bottomLeft: isSmall
-                                ? const Radius.circular(16)
-                                : Radius.zero,
+                            bottomLeft: isSmall ? const Radius.circular(16) : Radius.zero,
                           )
                         : BorderRadius.zero;
-                    final double rightPanelOffset = !isSmall
-                        ? (isEnabled
-                            ? ToolPanel.panelWidth - 10
-                            : (64 + mediaQuery.padding.right))
-                        : 0;
-                    final double bottomPanelOffset =
-                        isSmall ? mediaQuery.padding.bottom + 52 : 0;
+                    final double rightPanelOffset =
+                        !isSmall ? (isEnabled ? ToolPanel.panelWidth - 10 : (64 + mediaQuery.padding.right)) : 0;
+                    final double bottomPanelOffset = isSmall ? mediaQuery.padding.bottom + 52 : 0;
                     return Stack(
                       children: <Widget>[
                         if (isToolbarVisible && isSmall)
@@ -560,6 +556,7 @@ class _DevicePreviewState extends State<DevicePreview> {
                             right: 0,
                             left: 0,
                             child: DevicePreviewSmallLayout(
+                              shortcutDevices: widget.shortcutDevices,
                               slivers: widget.tools,
                               maxMenuHeight: constraints.maxHeight * 0.5,
                               scaffoldKey: scaffoldKey,
@@ -634,6 +631,22 @@ class _DevicePreviewState extends State<DevicePreview> {
                             ),
                           ),
                         ),
+                        Positioned(
+                          top: 0,
+                          left: 0,
+                          child: Visibility(
+                            visible: isEnabled,
+                            child: SafeArea(
+                              child: SizedBox(
+                                height: 20,
+                                child: Text(
+                                  deviceIdentifier ?? "",
+                                  style: const TextStyle(color: Colors.black),
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
                       ],
                     );
                   },

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
 
@@ -12,7 +12,7 @@ part of 'state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DevicePreviewState {
@@ -27,9 +27,9 @@ mixin _$DevicePreviewState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? notInitialized,
-    TResult Function()? initializing,
-    TResult Function(List<DeviceInfo> devices, List<NamedLocale> locales,
+    TResult? Function()? notInitialized,
+    TResult? Function()? initializing,
+    TResult? Function(List<DeviceInfo> devices, List<NamedLocale> locales,
             DevicePreviewData data)?
         initialized,
   }) =>
@@ -55,9 +55,9 @@ mixin _$DevicePreviewState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NotInitializedDevicePreviewState value)? notInitialized,
-    TResult Function(_InitializingDevicePreviewState value)? initializing,
-    TResult Function(_InitializedDevicePreviewState value)? initialized,
+    TResult? Function(_NotInitializedDevicePreviewState value)? notInitialized,
+    TResult? Function(_InitializingDevicePreviewState value)? initializing,
+    TResult? Function(_InitializedDevicePreviewState value)? initialized,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,65 +74,55 @@ mixin _$DevicePreviewState {
 abstract class $DevicePreviewStateCopyWith<$Res> {
   factory $DevicePreviewStateCopyWith(
           DevicePreviewState value, $Res Function(DevicePreviewState) then) =
-      _$DevicePreviewStateCopyWithImpl<$Res>;
+      _$DevicePreviewStateCopyWithImpl<$Res, DevicePreviewState>;
 }
 
 /// @nodoc
-class _$DevicePreviewStateCopyWithImpl<$Res>
+class _$DevicePreviewStateCopyWithImpl<$Res, $Val extends DevicePreviewState>
     implements $DevicePreviewStateCopyWith<$Res> {
   _$DevicePreviewStateCopyWithImpl(this._value, this._then);
 
-  final DevicePreviewState _value;
   // ignore: unused_field
-  final $Res Function(DevicePreviewState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_NotInitializedDevicePreviewStateCopyWith<$Res> {
-  factory _$$_NotInitializedDevicePreviewStateCopyWith(
-          _$_NotInitializedDevicePreviewState value,
-          $Res Function(_$_NotInitializedDevicePreviewState) then) =
-      __$$_NotInitializedDevicePreviewStateCopyWithImpl<$Res>;
+abstract class _$$NotInitializedDevicePreviewStateImplCopyWith<$Res> {
+  factory _$$NotInitializedDevicePreviewStateImplCopyWith(
+          _$NotInitializedDevicePreviewStateImpl value,
+          $Res Function(_$NotInitializedDevicePreviewStateImpl) then) =
+      __$$NotInitializedDevicePreviewStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NotInitializedDevicePreviewStateCopyWithImpl<$Res>
-    extends _$DevicePreviewStateCopyWithImpl<$Res>
-    implements _$$_NotInitializedDevicePreviewStateCopyWith<$Res> {
-  __$$_NotInitializedDevicePreviewStateCopyWithImpl(
-      _$_NotInitializedDevicePreviewState _value,
-      $Res Function(_$_NotInitializedDevicePreviewState) _then)
-      : super(_value, (v) => _then(v as _$_NotInitializedDevicePreviewState));
-
-  @override
-  _$_NotInitializedDevicePreviewState get _value =>
-      super._value as _$_NotInitializedDevicePreviewState;
+class __$$NotInitializedDevicePreviewStateImplCopyWithImpl<$Res>
+    extends _$DevicePreviewStateCopyWithImpl<$Res,
+        _$NotInitializedDevicePreviewStateImpl>
+    implements _$$NotInitializedDevicePreviewStateImplCopyWith<$Res> {
+  __$$NotInitializedDevicePreviewStateImplCopyWithImpl(
+      _$NotInitializedDevicePreviewStateImpl _value,
+      $Res Function(_$NotInitializedDevicePreviewStateImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NotInitializedDevicePreviewState
-    with DiagnosticableTreeMixin
+class _$NotInitializedDevicePreviewStateImpl
     implements _NotInitializedDevicePreviewState {
-  const _$_NotInitializedDevicePreviewState();
+  const _$NotInitializedDevicePreviewStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DevicePreviewState.notInitialized()';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'DevicePreviewState.notInitialized'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotInitializedDevicePreviewState);
+            other is _$NotInitializedDevicePreviewStateImpl);
   }
 
   @override
@@ -153,9 +143,9 @@ class _$_NotInitializedDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? notInitialized,
-    TResult Function()? initializing,
-    TResult Function(List<DeviceInfo> devices, List<NamedLocale> locales,
+    TResult? Function()? notInitialized,
+    TResult? Function()? initializing,
+    TResult? Function(List<DeviceInfo> devices, List<NamedLocale> locales,
             DevicePreviewData data)?
         initialized,
   }) {
@@ -193,9 +183,9 @@ class _$_NotInitializedDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NotInitializedDevicePreviewState value)? notInitialized,
-    TResult Function(_InitializingDevicePreviewState value)? initializing,
-    TResult Function(_InitializedDevicePreviewState value)? initialized,
+    TResult? Function(_NotInitializedDevicePreviewState value)? notInitialized,
+    TResult? Function(_InitializingDevicePreviewState value)? initializing,
+    TResult? Function(_InitializedDevicePreviewState value)? initialized,
   }) {
     return notInitialized?.call(this);
   }
@@ -217,55 +207,44 @@ class _$_NotInitializedDevicePreviewState
 
 abstract class _NotInitializedDevicePreviewState implements DevicePreviewState {
   const factory _NotInitializedDevicePreviewState() =
-      _$_NotInitializedDevicePreviewState;
+      _$NotInitializedDevicePreviewStateImpl;
 }
 
 /// @nodoc
-abstract class _$$_InitializingDevicePreviewStateCopyWith<$Res> {
-  factory _$$_InitializingDevicePreviewStateCopyWith(
-          _$_InitializingDevicePreviewState value,
-          $Res Function(_$_InitializingDevicePreviewState) then) =
-      __$$_InitializingDevicePreviewStateCopyWithImpl<$Res>;
+abstract class _$$InitializingDevicePreviewStateImplCopyWith<$Res> {
+  factory _$$InitializingDevicePreviewStateImplCopyWith(
+          _$InitializingDevicePreviewStateImpl value,
+          $Res Function(_$InitializingDevicePreviewStateImpl) then) =
+      __$$InitializingDevicePreviewStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitializingDevicePreviewStateCopyWithImpl<$Res>
-    extends _$DevicePreviewStateCopyWithImpl<$Res>
-    implements _$$_InitializingDevicePreviewStateCopyWith<$Res> {
-  __$$_InitializingDevicePreviewStateCopyWithImpl(
-      _$_InitializingDevicePreviewState _value,
-      $Res Function(_$_InitializingDevicePreviewState) _then)
-      : super(_value, (v) => _then(v as _$_InitializingDevicePreviewState));
-
-  @override
-  _$_InitializingDevicePreviewState get _value =>
-      super._value as _$_InitializingDevicePreviewState;
+class __$$InitializingDevicePreviewStateImplCopyWithImpl<$Res>
+    extends _$DevicePreviewStateCopyWithImpl<$Res,
+        _$InitializingDevicePreviewStateImpl>
+    implements _$$InitializingDevicePreviewStateImplCopyWith<$Res> {
+  __$$InitializingDevicePreviewStateImplCopyWithImpl(
+      _$InitializingDevicePreviewStateImpl _value,
+      $Res Function(_$InitializingDevicePreviewStateImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InitializingDevicePreviewState
-    with DiagnosticableTreeMixin
+class _$InitializingDevicePreviewStateImpl
     implements _InitializingDevicePreviewState {
-  const _$_InitializingDevicePreviewState();
+  const _$InitializingDevicePreviewStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DevicePreviewState.initializing()';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'DevicePreviewState.initializing'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InitializingDevicePreviewState);
+            other is _$InitializingDevicePreviewStateImpl);
   }
 
   @override
@@ -286,9 +265,9 @@ class _$_InitializingDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? notInitialized,
-    TResult Function()? initializing,
-    TResult Function(List<DeviceInfo> devices, List<NamedLocale> locales,
+    TResult? Function()? notInitialized,
+    TResult? Function()? initializing,
+    TResult? Function(List<DeviceInfo> devices, List<NamedLocale> locales,
             DevicePreviewData data)?
         initialized,
   }) {
@@ -326,9 +305,9 @@ class _$_InitializingDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NotInitializedDevicePreviewState value)? notInitialized,
-    TResult Function(_InitializingDevicePreviewState value)? initializing,
-    TResult Function(_InitializedDevicePreviewState value)? initialized,
+    TResult? Function(_NotInitializedDevicePreviewState value)? notInitialized,
+    TResult? Function(_InitializingDevicePreviewState value)? initializing,
+    TResult? Function(_InitializedDevicePreviewState value)? initialized,
   }) {
     return initializing?.call(this);
   }
@@ -350,15 +329,16 @@ class _$_InitializingDevicePreviewState
 
 abstract class _InitializingDevicePreviewState implements DevicePreviewState {
   const factory _InitializingDevicePreviewState() =
-      _$_InitializingDevicePreviewState;
+      _$InitializingDevicePreviewStateImpl;
 }
 
 /// @nodoc
-abstract class _$$_InitializedDevicePreviewStateCopyWith<$Res> {
-  factory _$$_InitializedDevicePreviewStateCopyWith(
-          _$_InitializedDevicePreviewState value,
-          $Res Function(_$_InitializedDevicePreviewState) then) =
-      __$$_InitializedDevicePreviewStateCopyWithImpl<$Res>;
+abstract class _$$InitializedDevicePreviewStateImplCopyWith<$Res> {
+  factory _$$InitializedDevicePreviewStateImplCopyWith(
+          _$InitializedDevicePreviewStateImpl value,
+          $Res Function(_$InitializedDevicePreviewStateImpl) then) =
+      __$$InitializedDevicePreviewStateImplCopyWithImpl<$Res>;
+  @useResult
   $Res call(
       {List<DeviceInfo> devices,
       List<NamedLocale> locales,
@@ -368,34 +348,32 @@ abstract class _$$_InitializedDevicePreviewStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InitializedDevicePreviewStateCopyWithImpl<$Res>
-    extends _$DevicePreviewStateCopyWithImpl<$Res>
-    implements _$$_InitializedDevicePreviewStateCopyWith<$Res> {
-  __$$_InitializedDevicePreviewStateCopyWithImpl(
-      _$_InitializedDevicePreviewState _value,
-      $Res Function(_$_InitializedDevicePreviewState) _then)
-      : super(_value, (v) => _then(v as _$_InitializedDevicePreviewState));
+class __$$InitializedDevicePreviewStateImplCopyWithImpl<$Res>
+    extends _$DevicePreviewStateCopyWithImpl<$Res,
+        _$InitializedDevicePreviewStateImpl>
+    implements _$$InitializedDevicePreviewStateImplCopyWith<$Res> {
+  __$$InitializedDevicePreviewStateImplCopyWithImpl(
+      _$InitializedDevicePreviewStateImpl _value,
+      $Res Function(_$InitializedDevicePreviewStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_InitializedDevicePreviewState get _value =>
-      super._value as _$_InitializedDevicePreviewState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? devices = freezed,
-    Object? locales = freezed,
-    Object? data = freezed,
+    Object? devices = null,
+    Object? locales = null,
+    Object? data = null,
   }) {
-    return _then(_$_InitializedDevicePreviewState(
-      devices: devices == freezed
+    return _then(_$InitializedDevicePreviewStateImpl(
+      devices: null == devices
           ? _value._devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<DeviceInfo>,
-      locales: locales == freezed
+      locales: null == locales
           ? _value._locales
           : locales // ignore: cast_nullable_to_non_nullable
               as List<NamedLocale>,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as DevicePreviewData,
@@ -403,6 +381,7 @@ class __$$_InitializedDevicePreviewStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DevicePreviewDataCopyWith<$Res> get data {
     return $DevicePreviewDataCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
@@ -412,10 +391,9 @@ class __$$_InitializedDevicePreviewStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitializedDevicePreviewState
-    with DiagnosticableTreeMixin
+class _$InitializedDevicePreviewStateImpl
     implements _InitializedDevicePreviewState {
-  const _$_InitializedDevicePreviewState(
+  const _$InitializedDevicePreviewStateImpl(
       {required final List<DeviceInfo> devices,
       required final List<NamedLocale> locales,
       required this.data})
@@ -428,6 +406,7 @@ class _$_InitializedDevicePreviewState
   /// The list of all available devices.
   @override
   List<DeviceInfo> get devices {
+    if (_devices is EqualUnmodifiableListView) return _devices;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_devices);
   }
@@ -438,6 +417,7 @@ class _$_InitializedDevicePreviewState
   /// The list of all available locales.
   @override
   List<NamedLocale> get locales {
+    if (_locales is EqualUnmodifiableListView) return _locales;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_locales);
   }
@@ -447,28 +427,18 @@ class _$_InitializedDevicePreviewState
   final DevicePreviewData data;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DevicePreviewState.initialized(devices: $devices, locales: $locales, data: $data)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DevicePreviewState.initialized'))
-      ..add(DiagnosticsProperty('devices', devices))
-      ..add(DiagnosticsProperty('locales', locales))
-      ..add(DiagnosticsProperty('data', data));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InitializedDevicePreviewState &&
+            other is _$InitializedDevicePreviewStateImpl &&
             const DeepCollectionEquality().equals(other._devices, _devices) &&
             const DeepCollectionEquality().equals(other._locales, _locales) &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.data, data) || other.data == data));
   }
 
   @override
@@ -476,13 +446,15 @@ class _$_InitializedDevicePreviewState
       runtimeType,
       const DeepCollectionEquality().hash(_devices),
       const DeepCollectionEquality().hash(_locales),
-      const DeepCollectionEquality().hash(data));
+      data);
 
   @JsonKey(ignore: true)
   @override
-  _$$_InitializedDevicePreviewStateCopyWith<_$_InitializedDevicePreviewState>
-      get copyWith => __$$_InitializedDevicePreviewStateCopyWithImpl<
-          _$_InitializedDevicePreviewState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InitializedDevicePreviewStateImplCopyWith<
+          _$InitializedDevicePreviewStateImpl>
+      get copyWith => __$$InitializedDevicePreviewStateImplCopyWithImpl<
+          _$InitializedDevicePreviewStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -499,9 +471,9 @@ class _$_InitializedDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? notInitialized,
-    TResult Function()? initializing,
-    TResult Function(List<DeviceInfo> devices, List<NamedLocale> locales,
+    TResult? Function()? notInitialized,
+    TResult? Function()? initializing,
+    TResult? Function(List<DeviceInfo> devices, List<NamedLocale> locales,
             DevicePreviewData data)?
         initialized,
   }) {
@@ -539,9 +511,9 @@ class _$_InitializedDevicePreviewState
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NotInitializedDevicePreviewState value)? notInitialized,
-    TResult Function(_InitializingDevicePreviewState value)? initializing,
-    TResult Function(_InitializedDevicePreviewState value)? initialized,
+    TResult? Function(_NotInitializedDevicePreviewState value)? notInitialized,
+    TResult? Function(_InitializingDevicePreviewState value)? initializing,
+    TResult? Function(_InitializedDevicePreviewState value)? initialized,
   }) {
     return initialized?.call(this);
   }
@@ -566,18 +538,19 @@ abstract class _InitializedDevicePreviewState implements DevicePreviewState {
           {required final List<DeviceInfo> devices,
           required final List<NamedLocale> locales,
           required final DevicePreviewData data}) =
-      _$_InitializedDevicePreviewState;
+      _$InitializedDevicePreviewStateImpl;
 
   /// The list of all available devices.
-  List<DeviceInfo> get devices => throw _privateConstructorUsedError;
+  List<DeviceInfo> get devices;
 
   /// The list of all available locales.
-  List<NamedLocale> get locales => throw _privateConstructorUsedError;
+  List<NamedLocale> get locales;
 
   /// The user settings of the preview.
-  DevicePreviewData get data => throw _privateConstructorUsedError;
+  DevicePreviewData get data;
   @JsonKey(ignore: true)
-  _$$_InitializedDevicePreviewStateCopyWith<_$_InitializedDevicePreviewState>
+  _$$InitializedDevicePreviewStateImplCopyWith<
+          _$InitializedDevicePreviewStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -587,6 +560,9 @@ DevicePreviewData _$DevicePreviewDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DevicePreviewData {
+  /// The list of all shortcuts to devices.
+  List<String> get shortcutDevices => throw _privateConstructorUsedError;
+
   /// Indicate whether the toolbar is visible.
   bool get isToolbarVisible => throw _privateConstructorUsedError;
 
@@ -647,9 +623,11 @@ mixin _$DevicePreviewData {
 abstract class $DevicePreviewDataCopyWith<$Res> {
   factory $DevicePreviewDataCopyWith(
           DevicePreviewData value, $Res Function(DevicePreviewData) then) =
-      _$DevicePreviewDataCopyWithImpl<$Res>;
+      _$DevicePreviewDataCopyWithImpl<$Res, DevicePreviewData>;
+  @useResult
   $Res call(
-      {bool isToolbarVisible,
+      {List<String> shortcutDevices,
+      bool isToolbarVisible,
       bool isEnabled,
       Orientation orientation,
       String? deviceIdentifier,
@@ -672,138 +650,149 @@ abstract class $DevicePreviewDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DevicePreviewDataCopyWithImpl<$Res>
+class _$DevicePreviewDataCopyWithImpl<$Res, $Val extends DevicePreviewData>
     implements $DevicePreviewDataCopyWith<$Res> {
   _$DevicePreviewDataCopyWithImpl(this._value, this._then);
 
-  final DevicePreviewData _value;
   // ignore: unused_field
-  final $Res Function(DevicePreviewData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isToolbarVisible = freezed,
-    Object? isEnabled = freezed,
-    Object? orientation = freezed,
+    Object? shortcutDevices = null,
+    Object? isToolbarVisible = null,
+    Object? isEnabled = null,
+    Object? orientation = null,
     Object? deviceIdentifier = freezed,
-    Object? locale = freezed,
-    Object? isFrameVisible = freezed,
-    Object? isDarkMode = freezed,
-    Object? boldText = freezed,
-    Object? isVirtualKeyboardVisible = freezed,
-    Object? disableAnimations = freezed,
-    Object? highContrast = freezed,
-    Object? accessibleNavigation = freezed,
-    Object? invertColors = freezed,
-    Object? pluginData = freezed,
-    Object? textScaleFactor = freezed,
+    Object? locale = null,
+    Object? isFrameVisible = null,
+    Object? isDarkMode = null,
+    Object? boldText = null,
+    Object? isVirtualKeyboardVisible = null,
+    Object? disableAnimations = null,
+    Object? highContrast = null,
+    Object? accessibleNavigation = null,
+    Object? invertColors = null,
+    Object? pluginData = null,
+    Object? textScaleFactor = null,
     Object? settings = freezed,
     Object? customDevice = freezed,
   }) {
     return _then(_value.copyWith(
-      isToolbarVisible: isToolbarVisible == freezed
+      shortcutDevices: null == shortcutDevices
+          ? _value.shortcutDevices
+          : shortcutDevices // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      isToolbarVisible: null == isToolbarVisible
           ? _value.isToolbarVisible
           : isToolbarVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEnabled: isEnabled == freezed
+      isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      orientation: orientation == freezed
+      orientation: null == orientation
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
               as Orientation,
-      deviceIdentifier: deviceIdentifier == freezed
+      deviceIdentifier: freezed == deviceIdentifier
           ? _value.deviceIdentifier
           : deviceIdentifier // ignore: cast_nullable_to_non_nullable
               as String?,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as String,
-      isFrameVisible: isFrameVisible == freezed
+      isFrameVisible: null == isFrameVisible
           ? _value.isFrameVisible
           : isFrameVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isDarkMode: isDarkMode == freezed
+      isDarkMode: null == isDarkMode
           ? _value.isDarkMode
           : isDarkMode // ignore: cast_nullable_to_non_nullable
               as bool,
-      boldText: boldText == freezed
+      boldText: null == boldText
           ? _value.boldText
           : boldText // ignore: cast_nullable_to_non_nullable
               as bool,
-      isVirtualKeyboardVisible: isVirtualKeyboardVisible == freezed
+      isVirtualKeyboardVisible: null == isVirtualKeyboardVisible
           ? _value.isVirtualKeyboardVisible
           : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      disableAnimations: disableAnimations == freezed
+      disableAnimations: null == disableAnimations
           ? _value.disableAnimations
           : disableAnimations // ignore: cast_nullable_to_non_nullable
               as bool,
-      highContrast: highContrast == freezed
+      highContrast: null == highContrast
           ? _value.highContrast
           : highContrast // ignore: cast_nullable_to_non_nullable
               as bool,
-      accessibleNavigation: accessibleNavigation == freezed
+      accessibleNavigation: null == accessibleNavigation
           ? _value.accessibleNavigation
           : accessibleNavigation // ignore: cast_nullable_to_non_nullable
               as bool,
-      invertColors: invertColors == freezed
+      invertColors: null == invertColors
           ? _value.invertColors
           : invertColors // ignore: cast_nullable_to_non_nullable
               as bool,
-      pluginData: pluginData == freezed
+      pluginData: null == pluginData
           ? _value.pluginData
           : pluginData // ignore: cast_nullable_to_non_nullable
               as Map<String, Map<String, dynamic>>,
-      textScaleFactor: textScaleFactor == freezed
+      textScaleFactor: null == textScaleFactor
           ? _value.textScaleFactor
           : textScaleFactor // ignore: cast_nullable_to_non_nullable
               as double,
-      settings: settings == freezed
+      settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
               as DevicePreviewSettingsData?,
-      customDevice: customDevice == freezed
+      customDevice: freezed == customDevice
           ? _value.customDevice
           : customDevice // ignore: cast_nullable_to_non_nullable
               as CustomDeviceInfoData?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DevicePreviewSettingsDataCopyWith<$Res>? get settings {
     if (_value.settings == null) {
       return null;
     }
 
     return $DevicePreviewSettingsDataCopyWith<$Res>(_value.settings!, (value) {
-      return _then(_value.copyWith(settings: value));
+      return _then(_value.copyWith(settings: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CustomDeviceInfoDataCopyWith<$Res>? get customDevice {
     if (_value.customDevice == null) {
       return null;
     }
 
     return $CustomDeviceInfoDataCopyWith<$Res>(_value.customDevice!, (value) {
-      return _then(_value.copyWith(customDevice: value));
+      return _then(_value.copyWith(customDevice: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_DevicePreviewDataCopyWith<$Res>
+abstract class _$$DevicePreviewDataImplCopyWith<$Res>
     implements $DevicePreviewDataCopyWith<$Res> {
-  factory _$$_DevicePreviewDataCopyWith(_$_DevicePreviewData value,
-          $Res Function(_$_DevicePreviewData) then) =
-      __$$_DevicePreviewDataCopyWithImpl<$Res>;
+  factory _$$DevicePreviewDataImplCopyWith(_$DevicePreviewDataImpl value,
+          $Res Function(_$DevicePreviewDataImpl) then) =
+      __$$DevicePreviewDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
-      {bool isToolbarVisible,
+      {List<String> shortcutDevices,
+      bool isToolbarVisible,
       bool isEnabled,
       Orientation orientation,
       String? deviceIdentifier,
@@ -828,102 +817,105 @@ abstract class _$$_DevicePreviewDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DevicePreviewDataCopyWithImpl<$Res>
-    extends _$DevicePreviewDataCopyWithImpl<$Res>
-    implements _$$_DevicePreviewDataCopyWith<$Res> {
-  __$$_DevicePreviewDataCopyWithImpl(
-      _$_DevicePreviewData _value, $Res Function(_$_DevicePreviewData) _then)
-      : super(_value, (v) => _then(v as _$_DevicePreviewData));
+class __$$DevicePreviewDataImplCopyWithImpl<$Res>
+    extends _$DevicePreviewDataCopyWithImpl<$Res, _$DevicePreviewDataImpl>
+    implements _$$DevicePreviewDataImplCopyWith<$Res> {
+  __$$DevicePreviewDataImplCopyWithImpl(_$DevicePreviewDataImpl _value,
+      $Res Function(_$DevicePreviewDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_DevicePreviewData get _value => super._value as _$_DevicePreviewData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isToolbarVisible = freezed,
-    Object? isEnabled = freezed,
-    Object? orientation = freezed,
+    Object? shortcutDevices = null,
+    Object? isToolbarVisible = null,
+    Object? isEnabled = null,
+    Object? orientation = null,
     Object? deviceIdentifier = freezed,
-    Object? locale = freezed,
-    Object? isFrameVisible = freezed,
-    Object? isDarkMode = freezed,
-    Object? boldText = freezed,
-    Object? isVirtualKeyboardVisible = freezed,
-    Object? disableAnimations = freezed,
-    Object? highContrast = freezed,
-    Object? accessibleNavigation = freezed,
-    Object? invertColors = freezed,
-    Object? pluginData = freezed,
-    Object? textScaleFactor = freezed,
+    Object? locale = null,
+    Object? isFrameVisible = null,
+    Object? isDarkMode = null,
+    Object? boldText = null,
+    Object? isVirtualKeyboardVisible = null,
+    Object? disableAnimations = null,
+    Object? highContrast = null,
+    Object? accessibleNavigation = null,
+    Object? invertColors = null,
+    Object? pluginData = null,
+    Object? textScaleFactor = null,
     Object? settings = freezed,
     Object? customDevice = freezed,
   }) {
-    return _then(_$_DevicePreviewData(
-      isToolbarVisible: isToolbarVisible == freezed
+    return _then(_$DevicePreviewDataImpl(
+      shortcutDevices: null == shortcutDevices
+          ? _value._shortcutDevices
+          : shortcutDevices // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      isToolbarVisible: null == isToolbarVisible
           ? _value.isToolbarVisible
           : isToolbarVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEnabled: isEnabled == freezed
+      isEnabled: null == isEnabled
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      orientation: orientation == freezed
+      orientation: null == orientation
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
               as Orientation,
-      deviceIdentifier: deviceIdentifier == freezed
+      deviceIdentifier: freezed == deviceIdentifier
           ? _value.deviceIdentifier
           : deviceIdentifier // ignore: cast_nullable_to_non_nullable
               as String?,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as String,
-      isFrameVisible: isFrameVisible == freezed
+      isFrameVisible: null == isFrameVisible
           ? _value.isFrameVisible
           : isFrameVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isDarkMode: isDarkMode == freezed
+      isDarkMode: null == isDarkMode
           ? _value.isDarkMode
           : isDarkMode // ignore: cast_nullable_to_non_nullable
               as bool,
-      boldText: boldText == freezed
+      boldText: null == boldText
           ? _value.boldText
           : boldText // ignore: cast_nullable_to_non_nullable
               as bool,
-      isVirtualKeyboardVisible: isVirtualKeyboardVisible == freezed
+      isVirtualKeyboardVisible: null == isVirtualKeyboardVisible
           ? _value.isVirtualKeyboardVisible
           : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      disableAnimations: disableAnimations == freezed
+      disableAnimations: null == disableAnimations
           ? _value.disableAnimations
           : disableAnimations // ignore: cast_nullable_to_non_nullable
               as bool,
-      highContrast: highContrast == freezed
+      highContrast: null == highContrast
           ? _value.highContrast
           : highContrast // ignore: cast_nullable_to_non_nullable
               as bool,
-      accessibleNavigation: accessibleNavigation == freezed
+      accessibleNavigation: null == accessibleNavigation
           ? _value.accessibleNavigation
           : accessibleNavigation // ignore: cast_nullable_to_non_nullable
               as bool,
-      invertColors: invertColors == freezed
+      invertColors: null == invertColors
           ? _value.invertColors
           : invertColors // ignore: cast_nullable_to_non_nullable
               as bool,
-      pluginData: pluginData == freezed
+      pluginData: null == pluginData
           ? _value._pluginData
           : pluginData // ignore: cast_nullable_to_non_nullable
               as Map<String, Map<String, dynamic>>,
-      textScaleFactor: textScaleFactor == freezed
+      textScaleFactor: null == textScaleFactor
           ? _value.textScaleFactor
           : textScaleFactor // ignore: cast_nullable_to_non_nullable
               as double,
-      settings: settings == freezed
+      settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
               as DevicePreviewSettingsData?,
-      customDevice: customDevice == freezed
+      customDevice: freezed == customDevice
           ? _value.customDevice
           : customDevice // ignore: cast_nullable_to_non_nullable
               as CustomDeviceInfoData?,
@@ -933,11 +925,10 @@ class __$$_DevicePreviewDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DevicePreviewData
-    with DiagnosticableTreeMixin
-    implements _DevicePreviewData {
-  const _$_DevicePreviewData(
-      {this.isToolbarVisible = true,
+class _$DevicePreviewDataImpl implements _DevicePreviewData {
+  const _$DevicePreviewDataImpl(
+      {final List<String> shortcutDevices = const [],
+      this.isToolbarVisible = true,
       this.isEnabled = true,
       this.orientation = Orientation.portrait,
       this.deviceIdentifier,
@@ -950,15 +941,27 @@ class _$_DevicePreviewData
       this.highContrast = false,
       this.accessibleNavigation = false,
       this.invertColors = false,
-      final Map<String, Map<String, dynamic>> pluginData =
-          const <String, Map<String, dynamic>>{},
+      final Map<String, Map<String, dynamic>> pluginData = const {},
       this.textScaleFactor = 1.0,
       this.settings,
       this.customDevice = null})
-      : _pluginData = pluginData;
+      : _shortcutDevices = shortcutDevices,
+        _pluginData = pluginData;
 
-  factory _$_DevicePreviewData.fromJson(Map<String, dynamic> json) =>
-      _$$_DevicePreviewDataFromJson(json);
+  factory _$DevicePreviewDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DevicePreviewDataImplFromJson(json);
+
+  /// The list of all shortcuts to devices.
+  final List<String> _shortcutDevices;
+
+  /// The list of all shortcuts to devices.
+  @override
+  @JsonKey()
+  List<String> get shortcutDevices {
+    if (_shortcutDevices is EqualUnmodifiableListView) return _shortcutDevices;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_shortcutDevices);
+  }
 
   /// Indicate whether the toolbar is visible.
   @override
@@ -1031,6 +1034,7 @@ class _$_DevicePreviewData
   @override
   @JsonKey()
   Map<String, Map<String, dynamic>> get pluginData {
+    if (_pluginData is EqualUnmodifiableMapView) return _pluginData;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_pluginData);
   }
@@ -1048,109 +1052,95 @@ class _$_DevicePreviewData
   final CustomDeviceInfoData? customDevice;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DevicePreviewData(isToolbarVisible: $isToolbarVisible, isEnabled: $isEnabled, orientation: $orientation, deviceIdentifier: $deviceIdentifier, locale: $locale, isFrameVisible: $isFrameVisible, isDarkMode: $isDarkMode, boldText: $boldText, isVirtualKeyboardVisible: $isVirtualKeyboardVisible, disableAnimations: $disableAnimations, highContrast: $highContrast, accessibleNavigation: $accessibleNavigation, invertColors: $invertColors, pluginData: $pluginData, textScaleFactor: $textScaleFactor, settings: $settings, customDevice: $customDevice)';
+  String toString() {
+    return 'DevicePreviewData(shortcutDevices: $shortcutDevices, isToolbarVisible: $isToolbarVisible, isEnabled: $isEnabled, orientation: $orientation, deviceIdentifier: $deviceIdentifier, locale: $locale, isFrameVisible: $isFrameVisible, isDarkMode: $isDarkMode, boldText: $boldText, isVirtualKeyboardVisible: $isVirtualKeyboardVisible, disableAnimations: $disableAnimations, highContrast: $highContrast, accessibleNavigation: $accessibleNavigation, invertColors: $invertColors, pluginData: $pluginData, textScaleFactor: $textScaleFactor, settings: $settings, customDevice: $customDevice)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DevicePreviewData'))
-      ..add(DiagnosticsProperty('isToolbarVisible', isToolbarVisible))
-      ..add(DiagnosticsProperty('isEnabled', isEnabled))
-      ..add(DiagnosticsProperty('orientation', orientation))
-      ..add(DiagnosticsProperty('deviceIdentifier', deviceIdentifier))
-      ..add(DiagnosticsProperty('locale', locale))
-      ..add(DiagnosticsProperty('isFrameVisible', isFrameVisible))
-      ..add(DiagnosticsProperty('isDarkMode', isDarkMode))
-      ..add(DiagnosticsProperty('boldText', boldText))
-      ..add(DiagnosticsProperty(
-          'isVirtualKeyboardVisible', isVirtualKeyboardVisible))
-      ..add(DiagnosticsProperty('disableAnimations', disableAnimations))
-      ..add(DiagnosticsProperty('highContrast', highContrast))
-      ..add(DiagnosticsProperty('accessibleNavigation', accessibleNavigation))
-      ..add(DiagnosticsProperty('invertColors', invertColors))
-      ..add(DiagnosticsProperty('pluginData', pluginData))
-      ..add(DiagnosticsProperty('textScaleFactor', textScaleFactor))
-      ..add(DiagnosticsProperty('settings', settings))
-      ..add(DiagnosticsProperty('customDevice', customDevice));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DevicePreviewData &&
+            other is _$DevicePreviewDataImpl &&
             const DeepCollectionEquality()
-                .equals(other.isToolbarVisible, isToolbarVisible) &&
-            const DeepCollectionEquality().equals(other.isEnabled, isEnabled) &&
-            const DeepCollectionEquality()
-                .equals(other.orientation, orientation) &&
-            const DeepCollectionEquality()
-                .equals(other.deviceIdentifier, deviceIdentifier) &&
-            const DeepCollectionEquality().equals(other.locale, locale) &&
-            const DeepCollectionEquality()
-                .equals(other.isFrameVisible, isFrameVisible) &&
-            const DeepCollectionEquality()
-                .equals(other.isDarkMode, isDarkMode) &&
-            const DeepCollectionEquality().equals(other.boldText, boldText) &&
-            const DeepCollectionEquality().equals(
-                other.isVirtualKeyboardVisible, isVirtualKeyboardVisible) &&
-            const DeepCollectionEquality()
-                .equals(other.disableAnimations, disableAnimations) &&
-            const DeepCollectionEquality()
-                .equals(other.highContrast, highContrast) &&
-            const DeepCollectionEquality()
-                .equals(other.accessibleNavigation, accessibleNavigation) &&
-            const DeepCollectionEquality()
-                .equals(other.invertColors, invertColors) &&
+                .equals(other._shortcutDevices, _shortcutDevices) &&
+            (identical(other.isToolbarVisible, isToolbarVisible) ||
+                other.isToolbarVisible == isToolbarVisible) &&
+            (identical(other.isEnabled, isEnabled) ||
+                other.isEnabled == isEnabled) &&
+            (identical(other.orientation, orientation) ||
+                other.orientation == orientation) &&
+            (identical(other.deviceIdentifier, deviceIdentifier) ||
+                other.deviceIdentifier == deviceIdentifier) &&
+            (identical(other.locale, locale) || other.locale == locale) &&
+            (identical(other.isFrameVisible, isFrameVisible) ||
+                other.isFrameVisible == isFrameVisible) &&
+            (identical(other.isDarkMode, isDarkMode) ||
+                other.isDarkMode == isDarkMode) &&
+            (identical(other.boldText, boldText) ||
+                other.boldText == boldText) &&
+            (identical(
+                    other.isVirtualKeyboardVisible, isVirtualKeyboardVisible) ||
+                other.isVirtualKeyboardVisible == isVirtualKeyboardVisible) &&
+            (identical(other.disableAnimations, disableAnimations) ||
+                other.disableAnimations == disableAnimations) &&
+            (identical(other.highContrast, highContrast) ||
+                other.highContrast == highContrast) &&
+            (identical(other.accessibleNavigation, accessibleNavigation) ||
+                other.accessibleNavigation == accessibleNavigation) &&
+            (identical(other.invertColors, invertColors) ||
+                other.invertColors == invertColors) &&
             const DeepCollectionEquality()
                 .equals(other._pluginData, _pluginData) &&
-            const DeepCollectionEquality()
-                .equals(other.textScaleFactor, textScaleFactor) &&
-            const DeepCollectionEquality().equals(other.settings, settings) &&
-            const DeepCollectionEquality()
-                .equals(other.customDevice, customDevice));
+            (identical(other.textScaleFactor, textScaleFactor) ||
+                other.textScaleFactor == textScaleFactor) &&
+            (identical(other.settings, settings) ||
+                other.settings == settings) &&
+            (identical(other.customDevice, customDevice) ||
+                other.customDevice == customDevice));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isToolbarVisible),
-      const DeepCollectionEquality().hash(isEnabled),
-      const DeepCollectionEquality().hash(orientation),
-      const DeepCollectionEquality().hash(deviceIdentifier),
-      const DeepCollectionEquality().hash(locale),
-      const DeepCollectionEquality().hash(isFrameVisible),
-      const DeepCollectionEquality().hash(isDarkMode),
-      const DeepCollectionEquality().hash(boldText),
-      const DeepCollectionEquality().hash(isVirtualKeyboardVisible),
-      const DeepCollectionEquality().hash(disableAnimations),
-      const DeepCollectionEquality().hash(highContrast),
-      const DeepCollectionEquality().hash(accessibleNavigation),
-      const DeepCollectionEquality().hash(invertColors),
+      const DeepCollectionEquality().hash(_shortcutDevices),
+      isToolbarVisible,
+      isEnabled,
+      orientation,
+      deviceIdentifier,
+      locale,
+      isFrameVisible,
+      isDarkMode,
+      boldText,
+      isVirtualKeyboardVisible,
+      disableAnimations,
+      highContrast,
+      accessibleNavigation,
+      invertColors,
       const DeepCollectionEquality().hash(_pluginData),
-      const DeepCollectionEquality().hash(textScaleFactor),
-      const DeepCollectionEquality().hash(settings),
-      const DeepCollectionEquality().hash(customDevice));
+      textScaleFactor,
+      settings,
+      customDevice);
 
   @JsonKey(ignore: true)
   @override
-  _$$_DevicePreviewDataCopyWith<_$_DevicePreviewData> get copyWith =>
-      __$$_DevicePreviewDataCopyWithImpl<_$_DevicePreviewData>(
+  @pragma('vm:prefer-inline')
+  _$$DevicePreviewDataImplCopyWith<_$DevicePreviewDataImpl> get copyWith =>
+      __$$DevicePreviewDataImplCopyWithImpl<_$DevicePreviewDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DevicePreviewDataToJson(this);
+    return _$$DevicePreviewDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DevicePreviewData implements DevicePreviewData {
   const factory _DevicePreviewData(
-      {final bool isToolbarVisible,
+      {final List<String> shortcutDevices,
+      final bool isToolbarVisible,
       final bool isEnabled,
       final Orientation orientation,
       final String? deviceIdentifier,
@@ -1166,81 +1156,84 @@ abstract class _DevicePreviewData implements DevicePreviewData {
       final Map<String, Map<String, dynamic>> pluginData,
       final double textScaleFactor,
       final DevicePreviewSettingsData? settings,
-      final CustomDeviceInfoData? customDevice}) = _$_DevicePreviewData;
+      final CustomDeviceInfoData? customDevice}) = _$DevicePreviewDataImpl;
 
   factory _DevicePreviewData.fromJson(Map<String, dynamic> json) =
-      _$_DevicePreviewData.fromJson;
+      _$DevicePreviewDataImpl.fromJson;
 
+  @override
+
+  /// The list of all shortcuts to devices.
+  List<String> get shortcutDevices;
   @override
 
   /// Indicate whether the toolbar is visible.
-  bool get isToolbarVisible => throw _privateConstructorUsedError;
+  bool get isToolbarVisible;
   @override
 
   /// Indicate whether the device simulation is enabled.
-  bool get isEnabled => throw _privateConstructorUsedError;
+  bool get isEnabled;
   @override
 
   /// The current orientation of the device
-  Orientation get orientation => throw _privateConstructorUsedError;
+  Orientation get orientation;
   @override
 
   /// The currently selected device.
-  String? get deviceIdentifier => throw _privateConstructorUsedError;
+  String? get deviceIdentifier;
   @override
 
   /// The currently selected device locale.
-  String get locale => throw _privateConstructorUsedError;
+  String get locale;
   @override
 
   /// Indicate whether the frame is currently visible.
-  bool get isFrameVisible => throw _privateConstructorUsedError;
+  bool get isFrameVisible;
   @override
 
   /// Indicate whether the mode is currently dark.
-  bool get isDarkMode => throw _privateConstructorUsedError;
+  bool get isDarkMode;
   @override
 
   /// Indicate whether texts are forced to bold.
-  bool get boldText => throw _privateConstructorUsedError;
+  bool get boldText;
   @override
 
   /// Indicate whether the virtual keyboard is visible.
-  bool get isVirtualKeyboardVisible => throw _privateConstructorUsedError;
+  bool get isVirtualKeyboardVisible;
   @override
 
   /// Indicate whether animations are disabled.
-  bool get disableAnimations => throw _privateConstructorUsedError;
+  bool get disableAnimations;
   @override
 
   /// Indicate whether the highcontrast mode is activated.
-  bool get highContrast => throw _privateConstructorUsedError;
+  bool get highContrast;
   @override
 
   /// Indicate whether the navigation is in accessible mode.
-  bool get accessibleNavigation => throw _privateConstructorUsedError;
+  bool get accessibleNavigation;
   @override
 
   /// Indicate whether image colors are inverted.
-  bool get invertColors => throw _privateConstructorUsedError;
+  bool get invertColors;
   @override
 
   /// Indicate whether image colors are inverted.
-  Map<String, Map<String, dynamic>> get pluginData =>
-      throw _privateConstructorUsedError;
+  Map<String, Map<String, dynamic>> get pluginData;
   @override
 
   /// The current text scaling factor.
-  double get textScaleFactor => throw _privateConstructorUsedError;
+  double get textScaleFactor;
   @override
-  DevicePreviewSettingsData? get settings => throw _privateConstructorUsedError;
+  DevicePreviewSettingsData? get settings;
   @override
 
   /// The custom device configuration
-  CustomDeviceInfoData? get customDevice => throw _privateConstructorUsedError;
+  CustomDeviceInfoData? get customDevice;
   @override
   @JsonKey(ignore: true)
-  _$$_DevicePreviewDataCopyWith<_$_DevicePreviewData> get copyWith =>
+  _$$DevicePreviewDataImplCopyWith<_$DevicePreviewDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1287,7 +1280,8 @@ mixin _$CustomDeviceInfoData {
 abstract class $CustomDeviceInfoDataCopyWith<$Res> {
   factory $CustomDeviceInfoDataCopyWith(CustomDeviceInfoData value,
           $Res Function(CustomDeviceInfoData) then) =
-      _$CustomDeviceInfoDataCopyWithImpl<$Res>;
+      _$CustomDeviceInfoDataCopyWithImpl<$Res, CustomDeviceInfoData>;
+  @useResult
   $Res call(
       {String id,
       DeviceType type,
@@ -1300,69 +1294,73 @@ abstract class $CustomDeviceInfoDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CustomDeviceInfoDataCopyWithImpl<$Res>
+class _$CustomDeviceInfoDataCopyWithImpl<$Res,
+        $Val extends CustomDeviceInfoData>
     implements $CustomDeviceInfoDataCopyWith<$Res> {
   _$CustomDeviceInfoDataCopyWithImpl(this._value, this._then);
 
-  final CustomDeviceInfoData _value;
   // ignore: unused_field
-  final $Res Function(CustomDeviceInfoData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
-    Object? platform = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? type = null,
+    Object? platform = null,
+    Object? name = null,
     Object? rotatedSafeAreas = freezed,
-    Object? safeAreas = freezed,
-    Object? pixelRatio = freezed,
-    Object? screenSize = freezed,
+    Object? safeAreas = null,
+    Object? pixelRatio = null,
+    Object? screenSize = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as DeviceType,
-      platform: platform == freezed
+      platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as TargetPlatform,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      rotatedSafeAreas: rotatedSafeAreas == freezed
+      rotatedSafeAreas: freezed == rotatedSafeAreas
           ? _value.rotatedSafeAreas
           : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
               as EdgeInsets?,
-      safeAreas: safeAreas == freezed
+      safeAreas: null == safeAreas
           ? _value.safeAreas
           : safeAreas // ignore: cast_nullable_to_non_nullable
               as EdgeInsets,
-      pixelRatio: pixelRatio == freezed
+      pixelRatio: null == pixelRatio
           ? _value.pixelRatio
           : pixelRatio // ignore: cast_nullable_to_non_nullable
               as double,
-      screenSize: screenSize == freezed
+      screenSize: null == screenSize
           ? _value.screenSize
           : screenSize // ignore: cast_nullable_to_non_nullable
               as Size,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_CustomDeviceInfoDataCopyWith<$Res>
+abstract class _$$CustomDeviceInfoDataImplCopyWith<$Res>
     implements $CustomDeviceInfoDataCopyWith<$Res> {
-  factory _$$_CustomDeviceInfoDataCopyWith(_$_CustomDeviceInfoData value,
-          $Res Function(_$_CustomDeviceInfoData) then) =
-      __$$_CustomDeviceInfoDataCopyWithImpl<$Res>;
+  factory _$$CustomDeviceInfoDataImplCopyWith(_$CustomDeviceInfoDataImpl value,
+          $Res Function(_$CustomDeviceInfoDataImpl) then) =
+      __$$CustomDeviceInfoDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       DeviceType type,
@@ -1375,57 +1373,55 @@ abstract class _$$_CustomDeviceInfoDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CustomDeviceInfoDataCopyWithImpl<$Res>
-    extends _$CustomDeviceInfoDataCopyWithImpl<$Res>
-    implements _$$_CustomDeviceInfoDataCopyWith<$Res> {
-  __$$_CustomDeviceInfoDataCopyWithImpl(_$_CustomDeviceInfoData _value,
-      $Res Function(_$_CustomDeviceInfoData) _then)
-      : super(_value, (v) => _then(v as _$_CustomDeviceInfoData));
+class __$$CustomDeviceInfoDataImplCopyWithImpl<$Res>
+    extends _$CustomDeviceInfoDataCopyWithImpl<$Res, _$CustomDeviceInfoDataImpl>
+    implements _$$CustomDeviceInfoDataImplCopyWith<$Res> {
+  __$$CustomDeviceInfoDataImplCopyWithImpl(_$CustomDeviceInfoDataImpl _value,
+      $Res Function(_$CustomDeviceInfoDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_CustomDeviceInfoData get _value => super._value as _$_CustomDeviceInfoData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
-    Object? platform = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? type = null,
+    Object? platform = null,
+    Object? name = null,
     Object? rotatedSafeAreas = freezed,
-    Object? safeAreas = freezed,
-    Object? pixelRatio = freezed,
-    Object? screenSize = freezed,
+    Object? safeAreas = null,
+    Object? pixelRatio = null,
+    Object? screenSize = null,
   }) {
-    return _then(_$_CustomDeviceInfoData(
-      id: id == freezed
+    return _then(_$CustomDeviceInfoDataImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as DeviceType,
-      platform: platform == freezed
+      platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as TargetPlatform,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      rotatedSafeAreas: rotatedSafeAreas == freezed
+      rotatedSafeAreas: freezed == rotatedSafeAreas
           ? _value.rotatedSafeAreas
           : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
               as EdgeInsets?,
-      safeAreas: safeAreas == freezed
+      safeAreas: null == safeAreas
           ? _value.safeAreas
           : safeAreas // ignore: cast_nullable_to_non_nullable
               as EdgeInsets,
-      pixelRatio: pixelRatio == freezed
+      pixelRatio: null == pixelRatio
           ? _value.pixelRatio
           : pixelRatio // ignore: cast_nullable_to_non_nullable
               as double,
-      screenSize: screenSize == freezed
+      screenSize: null == screenSize
           ? _value.screenSize
           : screenSize // ignore: cast_nullable_to_non_nullable
               as Size,
@@ -1435,10 +1431,8 @@ class __$$_CustomDeviceInfoDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CustomDeviceInfoData
-    with DiagnosticableTreeMixin
-    implements _CustomDeviceInfoData {
-  const _$_CustomDeviceInfoData(
+class _$CustomDeviceInfoDataImpl implements _CustomDeviceInfoData {
+  const _$CustomDeviceInfoDataImpl(
       {required this.id,
       required this.type,
       required this.platform,
@@ -1448,8 +1442,8 @@ class _$_CustomDeviceInfoData
       required this.pixelRatio,
       @SizeJsonConverter() required this.screenSize});
 
-  factory _$_CustomDeviceInfoData.fromJson(Map<String, dynamic> json) =>
-      _$$_CustomDeviceInfoDataFromJson(json);
+  factory _$CustomDeviceInfoDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CustomDeviceInfoDataImplFromJson(json);
 
   /// Identifier of the device.
   @override
@@ -1488,65 +1482,48 @@ class _$_CustomDeviceInfoData
   final Size screenSize;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'CustomDeviceInfoData(id: $id, type: $type, platform: $platform, name: $name, rotatedSafeAreas: $rotatedSafeAreas, safeAreas: $safeAreas, pixelRatio: $pixelRatio, screenSize: $screenSize)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CustomDeviceInfoData'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('type', type))
-      ..add(DiagnosticsProperty('platform', platform))
-      ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('rotatedSafeAreas', rotatedSafeAreas))
-      ..add(DiagnosticsProperty('safeAreas', safeAreas))
-      ..add(DiagnosticsProperty('pixelRatio', pixelRatio))
-      ..add(DiagnosticsProperty('screenSize', screenSize));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CustomDeviceInfoData &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.platform, platform) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.rotatedSafeAreas, rotatedSafeAreas) &&
-            const DeepCollectionEquality().equals(other.safeAreas, safeAreas) &&
-            const DeepCollectionEquality()
-                .equals(other.pixelRatio, pixelRatio) &&
-            const DeepCollectionEquality()
-                .equals(other.screenSize, screenSize));
+            other is _$CustomDeviceInfoDataImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.platform, platform) ||
+                other.platform == platform) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.rotatedSafeAreas, rotatedSafeAreas) ||
+                other.rotatedSafeAreas == rotatedSafeAreas) &&
+            (identical(other.safeAreas, safeAreas) ||
+                other.safeAreas == safeAreas) &&
+            (identical(other.pixelRatio, pixelRatio) ||
+                other.pixelRatio == pixelRatio) &&
+            (identical(other.screenSize, screenSize) ||
+                other.screenSize == screenSize));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(platform),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(rotatedSafeAreas),
-      const DeepCollectionEquality().hash(safeAreas),
-      const DeepCollectionEquality().hash(pixelRatio),
-      const DeepCollectionEquality().hash(screenSize));
+  int get hashCode => Object.hash(runtimeType, id, type, platform, name,
+      rotatedSafeAreas, safeAreas, pixelRatio, screenSize);
 
   @JsonKey(ignore: true)
   @override
-  _$$_CustomDeviceInfoDataCopyWith<_$_CustomDeviceInfoData> get copyWith =>
-      __$$_CustomDeviceInfoDataCopyWithImpl<_$_CustomDeviceInfoData>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$CustomDeviceInfoDataImplCopyWith<_$CustomDeviceInfoDataImpl>
+      get copyWith =>
+          __$$CustomDeviceInfoDataImplCopyWithImpl<_$CustomDeviceInfoDataImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CustomDeviceInfoDataToJson(this);
+    return _$$CustomDeviceInfoDataImplToJson(
+      this,
+    );
   }
 }
 
@@ -1560,50 +1537,50 @@ abstract class _CustomDeviceInfoData implements CustomDeviceInfoData {
           @EdgeInsetsJsonConverter() required final EdgeInsets safeAreas,
           required final double pixelRatio,
           @SizeJsonConverter() required final Size screenSize}) =
-      _$_CustomDeviceInfoData;
+      _$CustomDeviceInfoDataImpl;
 
   factory _CustomDeviceInfoData.fromJson(Map<String, dynamic> json) =
-      _$_CustomDeviceInfoData.fromJson;
+      _$CustomDeviceInfoDataImpl.fromJson;
 
   @override
 
   /// Identifier of the device.
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
 
   /// The device type.
-  DeviceType get type => throw _privateConstructorUsedError;
+  DeviceType get type;
   @override
 
   /// The device operating system.
-  TargetPlatform get platform => throw _privateConstructorUsedError;
+  TargetPlatform get platform;
   @override
 
   /// The display name of the device.
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
 
   /// The safe areas when the device is in landscape orientation.
   @NullableEdgeInsetsJsonConverter()
-  EdgeInsets? get rotatedSafeAreas => throw _privateConstructorUsedError;
+  EdgeInsets? get rotatedSafeAreas;
   @override
 
   /// The safe areas when the device is in portrait orientation.
   @EdgeInsetsJsonConverter()
-  EdgeInsets get safeAreas => throw _privateConstructorUsedError;
+  EdgeInsets get safeAreas;
   @override
 
   /// The screen pixel density of the device.
-  double get pixelRatio => throw _privateConstructorUsedError;
+  double get pixelRatio;
   @override
 
   /// The size in points of the screen content.
   @SizeJsonConverter()
-  Size get screenSize => throw _privateConstructorUsedError;
+  Size get screenSize;
   @override
   @JsonKey(ignore: true)
-  _$$_CustomDeviceInfoDataCopyWith<_$_CustomDeviceInfoData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CustomDeviceInfoDataImplCopyWith<_$CustomDeviceInfoDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 DevicePreviewSettingsData _$DevicePreviewSettingsDataFromJson(
@@ -1635,7 +1612,8 @@ mixin _$DevicePreviewSettingsData {
 abstract class $DevicePreviewSettingsDataCopyWith<$Res> {
   factory $DevicePreviewSettingsDataCopyWith(DevicePreviewSettingsData value,
           $Res Function(DevicePreviewSettingsData) then) =
-      _$DevicePreviewSettingsDataCopyWithImpl<$Res>;
+      _$DevicePreviewSettingsDataCopyWithImpl<$Res, DevicePreviewSettingsData>;
+  @useResult
   $Res call(
       {DevicePreviewToolBarPositionData toolbarPosition,
       DevicePreviewToolBarThemeData toolbarTheme,
@@ -1643,45 +1621,49 @@ abstract class $DevicePreviewSettingsDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DevicePreviewSettingsDataCopyWithImpl<$Res>
+class _$DevicePreviewSettingsDataCopyWithImpl<$Res,
+        $Val extends DevicePreviewSettingsData>
     implements $DevicePreviewSettingsDataCopyWith<$Res> {
   _$DevicePreviewSettingsDataCopyWithImpl(this._value, this._then);
 
-  final DevicePreviewSettingsData _value;
   // ignore: unused_field
-  final $Res Function(DevicePreviewSettingsData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? toolbarPosition = freezed,
-    Object? toolbarTheme = freezed,
-    Object? backgroundTheme = freezed,
+    Object? toolbarPosition = null,
+    Object? toolbarTheme = null,
+    Object? backgroundTheme = null,
   }) {
     return _then(_value.copyWith(
-      toolbarPosition: toolbarPosition == freezed
+      toolbarPosition: null == toolbarPosition
           ? _value.toolbarPosition
           : toolbarPosition // ignore: cast_nullable_to_non_nullable
               as DevicePreviewToolBarPositionData,
-      toolbarTheme: toolbarTheme == freezed
+      toolbarTheme: null == toolbarTheme
           ? _value.toolbarTheme
           : toolbarTheme // ignore: cast_nullable_to_non_nullable
               as DevicePreviewToolBarThemeData,
-      backgroundTheme: backgroundTheme == freezed
+      backgroundTheme: null == backgroundTheme
           ? _value.backgroundTheme
           : backgroundTheme // ignore: cast_nullable_to_non_nullable
               as DevicePreviewBackgroundThemeData,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_DevicePreviewSettingsDataCopyWith<$Res>
+abstract class _$$DevicePreviewSettingsDataImplCopyWith<$Res>
     implements $DevicePreviewSettingsDataCopyWith<$Res> {
-  factory _$$_DevicePreviewSettingsDataCopyWith(
-          _$_DevicePreviewSettingsData value,
-          $Res Function(_$_DevicePreviewSettingsData) then) =
-      __$$_DevicePreviewSettingsDataCopyWithImpl<$Res>;
+  factory _$$DevicePreviewSettingsDataImplCopyWith(
+          _$DevicePreviewSettingsDataImpl value,
+          $Res Function(_$DevicePreviewSettingsDataImpl) then) =
+      __$$DevicePreviewSettingsDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {DevicePreviewToolBarPositionData toolbarPosition,
       DevicePreviewToolBarThemeData toolbarTheme,
@@ -1689,34 +1671,32 @@ abstract class _$$_DevicePreviewSettingsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DevicePreviewSettingsDataCopyWithImpl<$Res>
-    extends _$DevicePreviewSettingsDataCopyWithImpl<$Res>
-    implements _$$_DevicePreviewSettingsDataCopyWith<$Res> {
-  __$$_DevicePreviewSettingsDataCopyWithImpl(
-      _$_DevicePreviewSettingsData _value,
-      $Res Function(_$_DevicePreviewSettingsData) _then)
-      : super(_value, (v) => _then(v as _$_DevicePreviewSettingsData));
+class __$$DevicePreviewSettingsDataImplCopyWithImpl<$Res>
+    extends _$DevicePreviewSettingsDataCopyWithImpl<$Res,
+        _$DevicePreviewSettingsDataImpl>
+    implements _$$DevicePreviewSettingsDataImplCopyWith<$Res> {
+  __$$DevicePreviewSettingsDataImplCopyWithImpl(
+      _$DevicePreviewSettingsDataImpl _value,
+      $Res Function(_$DevicePreviewSettingsDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_DevicePreviewSettingsData get _value =>
-      super._value as _$_DevicePreviewSettingsData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? toolbarPosition = freezed,
-    Object? toolbarTheme = freezed,
-    Object? backgroundTheme = freezed,
+    Object? toolbarPosition = null,
+    Object? toolbarTheme = null,
+    Object? backgroundTheme = null,
   }) {
-    return _then(_$_DevicePreviewSettingsData(
-      toolbarPosition: toolbarPosition == freezed
+    return _then(_$DevicePreviewSettingsDataImpl(
+      toolbarPosition: null == toolbarPosition
           ? _value.toolbarPosition
           : toolbarPosition // ignore: cast_nullable_to_non_nullable
               as DevicePreviewToolBarPositionData,
-      toolbarTheme: toolbarTheme == freezed
+      toolbarTheme: null == toolbarTheme
           ? _value.toolbarTheme
           : toolbarTheme // ignore: cast_nullable_to_non_nullable
               as DevicePreviewToolBarThemeData,
-      backgroundTheme: backgroundTheme == freezed
+      backgroundTheme: null == backgroundTheme
           ? _value.backgroundTheme
           : backgroundTheme // ignore: cast_nullable_to_non_nullable
               as DevicePreviewBackgroundThemeData,
@@ -1726,16 +1706,14 @@ class __$$_DevicePreviewSettingsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DevicePreviewSettingsData
-    with DiagnosticableTreeMixin
-    implements _DevicePreviewSettingsData {
-  const _$_DevicePreviewSettingsData(
+class _$DevicePreviewSettingsDataImpl implements _DevicePreviewSettingsData {
+  const _$DevicePreviewSettingsDataImpl(
       {this.toolbarPosition = DevicePreviewToolBarPositionData.bottom,
       this.toolbarTheme = DevicePreviewToolBarThemeData.dark,
       this.backgroundTheme = DevicePreviewBackgroundThemeData.light});
 
-  factory _$_DevicePreviewSettingsData.fromJson(Map<String, dynamic> json) =>
-      _$$_DevicePreviewSettingsDataFromJson(json);
+  factory _$DevicePreviewSettingsDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DevicePreviewSettingsDataImplFromJson(json);
 
   /// The toolbar position.
   @override
@@ -1753,50 +1731,40 @@ class _$_DevicePreviewSettingsData
   final DevicePreviewBackgroundThemeData backgroundTheme;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'DevicePreviewSettingsData(toolbarPosition: $toolbarPosition, toolbarTheme: $toolbarTheme, backgroundTheme: $backgroundTheme)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'DevicePreviewSettingsData'))
-      ..add(DiagnosticsProperty('toolbarPosition', toolbarPosition))
-      ..add(DiagnosticsProperty('toolbarTheme', toolbarTheme))
-      ..add(DiagnosticsProperty('backgroundTheme', backgroundTheme));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DevicePreviewSettingsData &&
-            const DeepCollectionEquality()
-                .equals(other.toolbarPosition, toolbarPosition) &&
-            const DeepCollectionEquality()
-                .equals(other.toolbarTheme, toolbarTheme) &&
-            const DeepCollectionEquality()
-                .equals(other.backgroundTheme, backgroundTheme));
+            other is _$DevicePreviewSettingsDataImpl &&
+            (identical(other.toolbarPosition, toolbarPosition) ||
+                other.toolbarPosition == toolbarPosition) &&
+            (identical(other.toolbarTheme, toolbarTheme) ||
+                other.toolbarTheme == toolbarTheme) &&
+            (identical(other.backgroundTheme, backgroundTheme) ||
+                other.backgroundTheme == backgroundTheme));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(toolbarPosition),
-      const DeepCollectionEquality().hash(toolbarTheme),
-      const DeepCollectionEquality().hash(backgroundTheme));
+  int get hashCode =>
+      Object.hash(runtimeType, toolbarPosition, toolbarTheme, backgroundTheme);
 
   @JsonKey(ignore: true)
   @override
-  _$$_DevicePreviewSettingsDataCopyWith<_$_DevicePreviewSettingsData>
-      get copyWith => __$$_DevicePreviewSettingsDataCopyWithImpl<
-          _$_DevicePreviewSettingsData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DevicePreviewSettingsDataImplCopyWith<_$DevicePreviewSettingsDataImpl>
+      get copyWith => __$$DevicePreviewSettingsDataImplCopyWithImpl<
+          _$DevicePreviewSettingsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DevicePreviewSettingsDataToJson(this);
+    return _$$DevicePreviewSettingsDataImplToJson(
+      this,
+    );
   }
 }
 
@@ -1805,28 +1773,25 @@ abstract class _DevicePreviewSettingsData implements DevicePreviewSettingsData {
           {final DevicePreviewToolBarPositionData toolbarPosition,
           final DevicePreviewToolBarThemeData toolbarTheme,
           final DevicePreviewBackgroundThemeData backgroundTheme}) =
-      _$_DevicePreviewSettingsData;
+      _$DevicePreviewSettingsDataImpl;
 
   factory _DevicePreviewSettingsData.fromJson(Map<String, dynamic> json) =
-      _$_DevicePreviewSettingsData.fromJson;
+      _$DevicePreviewSettingsDataImpl.fromJson;
 
   @override
 
   /// The toolbar position.
-  DevicePreviewToolBarPositionData get toolbarPosition =>
-      throw _privateConstructorUsedError;
+  DevicePreviewToolBarPositionData get toolbarPosition;
   @override
 
   /// The theme of the toolbar.
-  DevicePreviewToolBarThemeData get toolbarTheme =>
-      throw _privateConstructorUsedError;
+  DevicePreviewToolBarThemeData get toolbarTheme;
   @override
 
   /// The theme of the background.
-  DevicePreviewBackgroundThemeData get backgroundTheme =>
-      throw _privateConstructorUsedError;
+  DevicePreviewBackgroundThemeData get backgroundTheme;
   @override
   @JsonKey(ignore: true)
-  _$$_DevicePreviewSettingsDataCopyWith<_$_DevicePreviewSettingsData>
+  _$$DevicePreviewSettingsDataImplCopyWith<_$DevicePreviewSettingsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

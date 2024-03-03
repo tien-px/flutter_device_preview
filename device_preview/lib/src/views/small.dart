@@ -1,7 +1,8 @@
+import 'package:collection/collection.dart';
+import 'package:device_frame/device_frame.dart';
 import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import 'tool_panel/tool_panel.dart';
@@ -11,6 +12,7 @@ class DevicePreviewSmallLayout extends StatelessWidget {
   /// Create a new panel from the given tools grouped as [slivers].
   const DevicePreviewSmallLayout({
     Key? key,
+    required this.shortcutDevices,
     required this.maxMenuHeight,
     required this.scaffoldKey,
     required this.onMenuVisibleChanged,
@@ -25,6 +27,9 @@ class DevicePreviewSmallLayout extends StatelessWidget {
 
   /// Invoked each time the menu is shown or hidden.
   final ValueChanged<bool> onMenuVisibleChanged;
+
+  /// The devices that can be quickly selected.
+  final List<String> shortcutDevices;
 
   /// The sections containing the tools.
   ///
@@ -41,6 +46,7 @@ class DevicePreviewSmallLayout extends StatelessWidget {
       child: SafeArea(
         top: false,
         child: _BottomToolbar(
+          shortcuts: shortcutDevices,
           showPanel: () async {
             onMenuVisibleChanged(true);
             final sheet = scaffoldKey.currentState?.showBottomSheet(
@@ -72,26 +78,87 @@ class _BottomToolbar extends StatelessWidget {
   const _BottomToolbar({
     Key? key,
     required this.showPanel,
+    required this.shortcuts,
   }) : super(key: key);
 
   final VoidCallback showPanel;
+  final List<String> shortcuts;
 
   @override
   Widget build(BuildContext context) {
-    final isEnabled = context.select(
-      (DevicePreviewStore store) => store.data.isEnabled,
+    final isEnabled = context.select((DevicePreviewStore store) => store.data.isEnabled);
+    final devices = context.select((DevicePreviewStore store) => store.devices);
+    final deviceIdentifier = context.select(
+      (DevicePreviewStore store) => store.deviceInfo.identifier,
     );
+    print(devices.map((d) => d.identifier).toList());
+    List<DeviceInfo> shortcutDevices = shortcuts
+        .map((id) => devices.firstWhereOrNull((d) => d.identifier.toString().toLowerCase() == id.toLowerCase()))
+        .whereType<DeviceInfo>()
+        .toList();
+
     return Material(
-      child: ListTile(
-        title: const Text('Device Preview'),
-        onTap: isEnabled ? showPanel : null,
-        leading: const Icon(Icons.tune),
-        trailing: Switch(
-          value: isEnabled,
-          onChanged: (v) {
-            final state = context.read<DevicePreviewStore>();
-            state.data = state.data.copyWith(isEnabled: v);
-          },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: Row(
+          children: [
+            IconButton(onPressed: isEnabled ? showPanel : null, icon: const Icon(Icons.tune)),
+            const Text('Device Preview'),
+            const SizedBox(width: 8.0),
+            Expanded(
+              child: SizedBox(
+                height: 40,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: shortcutDevices.length,
+                  itemBuilder: (context, index) {
+                    final device = shortcutDevices[index];
+                    final isSelected = device.identifier == deviceIdentifier;
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
+                      child: InkWell(
+                        onTap: null,
+                        child: Container(
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: isSelected ? Colors.red : Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                          ),
+                          child: Center(
+                            child: IconButton(
+                              icon: Text(
+                                (index + 1).toString(),
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              onPressed: () {
+                                final state = context.read<DevicePreviewStore>();
+                                state.selectDevice(device.identifier);
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+            const SizedBox(width: 8.0),
+            Switch(
+              value: isEnabled,
+              onChanged: (v) {
+                final state = context.read<DevicePreviewStore>();
+                state.data = state.data.copyWith(isEnabled: v);
+              },
+            ),
+          ],
         ),
       ),
     );
