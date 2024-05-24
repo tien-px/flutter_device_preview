@@ -566,7 +566,7 @@ class _DevicePreviewState extends State<DevicePreview> {
                         if (isToolbarVisible && !isSmall)
                           Positioned.fill(
                             key: const Key('Large'),
-                            child: DervicePreviewLargeLayout(
+                            child: DevicePreviewLargeLayout(
                               slivers: widget.tools,
                             ),
                           ),
