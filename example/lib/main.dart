@@ -19,6 +19,9 @@ void main() {
         ...DevicePreview.defaultTools,
         CustomPlugin(),
       ],
+      onDeviceChanged: (deviceInfo) {
+        print('onDeviceChanged: $deviceInfo');
+      },
       builder: (context) => const BasicApp(),
     ),
   );

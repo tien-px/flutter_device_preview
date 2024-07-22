@@ -49,7 +49,7 @@ import 'views/small.dart';
 class DevicePreview extends StatefulWidget {
   /// Create a new [DevicePreview].
   const DevicePreview({
-    Key? key,
+    super.key,
     required this.builder,
     this.devices,
     this.data,
@@ -61,7 +61,10 @@ class DevicePreview extends StatefulWidget {
     this.storage,
     this.enabled = true,
     this.backgroundColor,
-  }) : super(key: key);
+    this.onDeviceChanged,
+  });
+
+  final Function(DeviceInfo)? onDeviceChanged;
 
   /// If not [enabled], the [child] is used directly.
   final bool enabled;
@@ -116,6 +119,8 @@ class DevicePreview extends StatefulWidget {
     AccessibilitySection(),
     SettingsSection(),
   ];
+
+  static Function(DeviceInfo)? onDeviceChangeCallback;
 
   @override
   _DevicePreviewState createState() => _DevicePreviewState();
@@ -351,6 +356,7 @@ class DevicePreview extends StatefulWidget {
 
 class _DevicePreviewState extends State<DevicePreview> {
   bool _isToolPanelPopOverOpen = false;
+  DeviceInfo? lastSelectedDevice;
 
   late DevicePreviewStorage storage = widget.storage ?? DevicePreviewStorage.preferences();
 
@@ -384,6 +390,7 @@ class _DevicePreviewState extends State<DevicePreview> {
   @override
   void initState() {
     _onScreenshot = StreamController<DeviceScreenshot>.broadcast();
+    DevicePreview.onDeviceChangeCallback = widget.onDeviceChanged;
     super.initState();
   }
 

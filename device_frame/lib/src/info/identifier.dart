@@ -1,6 +1,5 @@
+import 'package:device_frame/device_frame.dart';
 import 'package:flutter/foundation.dart';
-
-import 'device_type.dart';
 
 /// A unique identifier that represents a device.
 ///
@@ -28,22 +27,16 @@ class DeviceIdentifier {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DeviceIdentifier &&
-            other.name == name &&
-            other.type == type &&
-            other.platform == platform);
+        (other is DeviceIdentifier && other.name == name && other.type == type && other.platform == platform);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ name.hashCode ^ type.hashCode ^ platform.hashCode;
+  int get hashCode => runtimeType.hashCode ^ name.hashCode ^ type.hashCode ^ platform.hashCode;
 
   @override
   String toString() {
-    final platformKey =
-        platform.toString().replaceAll('$TargetPlatform.', '').toLowerCase();
-    final typeKey =
-        type.toString().replaceAll('$DeviceType.', '').toLowerCase();
+    final platformKey = platform.toString().replaceAll('$TargetPlatform.', '').toLowerCase();
+    final typeKey = type.toString().replaceAll('$DeviceType.', '').toLowerCase();
     return '${platformKey}_${typeKey}_$name';
   }
 }

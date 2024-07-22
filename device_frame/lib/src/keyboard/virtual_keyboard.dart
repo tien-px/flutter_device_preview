@@ -1,7 +1,6 @@
 import 'package:device_frame/device_frame.dart';
+import 'package:device_frame/src/keyboard/button.dart';
 import 'package:flutter/material.dart';
-
-import 'button.dart';
 
 /// Display a simulated on screen keyboard at the bottom of a [child] widget.
 ///
@@ -55,9 +54,7 @@ class VirtualKeyboard extends StatelessWidget {
       children: <Widget>[
         Positioned.fill(
           child: MediaQuery(
-            data: !isEnabled
-                ? mediaQuery
-                : VirtualKeyboard.mediaQuery(mediaQuery),
+            data: !isEnabled ? mediaQuery : VirtualKeyboard.mediaQuery(mediaQuery),
             child: child,
           ),
         ),
@@ -70,9 +67,7 @@ class VirtualKeyboard extends StatelessWidget {
             secondChild: const _VirtualKeyboard(
               height: _VirtualKeyboard.minHeight,
             ),
-            crossFadeState: isEnabled
-                ? CrossFadeState.showSecond
-                : CrossFadeState.showFirst,
+            crossFadeState: isEnabled ? CrossFadeState.showSecond : CrossFadeState.showFirst,
             duration: transitionDuration,
           ),
         ),
